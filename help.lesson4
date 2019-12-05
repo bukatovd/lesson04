@@ -1,0 +1,11 @@
+bot	Thistle Bot
+user	ThistleAiBot
+
+url	t.me/ThistleAiBot
+	tg://resolve?domain=ThistleAiBot
+
+Use this token to access the HTTP API:
+1030368472:AAGctnsO69piEV1QXQcr-FK4L5920SBTJ0Q
+
+For a description of the Bot API, 
+see this page: https://core.telegram.org/bots/api
