@@ -1,6 +1,6 @@
 FROM amd64/python:3
 
-WORKDIR /
+WORKDIR .
 COPY server.py /app
 EXPOSE  8686
 
