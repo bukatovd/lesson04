@@ -4,10 +4,13 @@
 import socket
 
 address_to_server = ('localhost', 8686)
+print('server is running, please, press ctrl+c to stop')
 
-clients = socket.socket()
-clients.connect(address_to_server)
-clients.send(str("hello"))
+while True:
+  message = input ("Your message>> ")
 
-data = clients.recv(1024)
-print(str(data))
+  clients = socket.socket()
+  clients.connect(address_to_server)
+  clients.send(bytes(message, encoding='UTF-8'))
+  data = clients.recv(1024)
+  print(str(data))
