@@ -1,8 +1,8 @@
 FROM alpine:3.9
 
-RUN apk add --no-cache --progress python3 &&\
+RUN apk add --no-cache python3 &&\
     rm -rf /var/cache/apk/* &&\
-    mkdir /home/socket &&\
-    cp ../socket/server.py /home/socket/
+#WORKDIR /home/socket    
+#ADD ../socket/server.py /home/socket/
 
-CMD ["tail", "-f", "/dev/null"]
+#CMD ["python3", "python3"]
