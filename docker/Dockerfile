@@ -1,6 +1,6 @@
-FROM alpine
+FROM ubuntu:18
 
-RUN apk add --update python3 
+RUN apt-get add --update python3 
 
 COPY server.py /server.py
 
