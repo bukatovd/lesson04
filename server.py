@@ -7,9 +7,9 @@ import requests
 SERVER_ADDRESS = ('localhost', 8686)
 
 def send_telegram(text: str):
-    #token = "1030368472:AAGctnsO69piEV1QXQcr-FK4L5920SBTJ0Q"
+    token = "1030368472:AAGctnsO69piEV1QXQcr-FK4L5920SBTJ0Q"
     url = "https://api.telegram.org/bot"
-    #channel_id = "@thistle_test"
+    channel_id = "@thistle_test"
     url += token
     method = url + "/sendMessage"
 
@@ -27,8 +27,7 @@ server_socket.bind(SERVER_ADDRESS)
 server_socket.listen(10)
 print('server is running, please, press ctrl+c to stop')
 
-print(str(channel_id))
-print(str(token))
+
 while True:
     connection, address = server_socket.accept()
     print("new connection from {address}".format(address=address))
