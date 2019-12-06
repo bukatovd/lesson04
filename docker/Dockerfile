@@ -1,9 +1,8 @@
-FROM ubuntu:18
+FROM amd64/python:3
 
-RUN apt-get add --update python3 
-
-COPY server.py /server.py
+COPY server.py .
 
 EXPOSE  8686
 
-CMD ["python3", "/server.py", "-p 8686"]
+CMD [ "python", "./server.py" ]
+
