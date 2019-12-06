@@ -1,6 +1,9 @@
 FROM amd64/python:3
 
+WORKDIR /
+COPY server.py /app
 EXPOSE  8686
 
-CMD [ "python", "./server.py" ]
+ENTRYPOINT [ "python" ]
+CMD [ "./app/server.py" ]
 
