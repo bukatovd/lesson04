@@ -1,8 +1,10 @@
 FROM alpine:3.9
 
-RUN apk add --no-cache python3 &&\
-    rm -rf /var/cache/apk/* &&\
-#WORKDIR /home/socket    
-#ADD ../socket/server.py /home/socket/
+RUN apk add --update python py-pip &&\
+    pip install Flask
 
-#CMD ["python3", "python3"]
+COPY server.py /server.py
+
+EXPOSE  8686
+
+CMD ["python", "/server.py", "-p 8686"]
