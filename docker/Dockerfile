@@ -1,4 +1,4 @@
-FROM python:3-onbuild
+FROM amd64/python:3
 
 EXPOSE  8686
 
