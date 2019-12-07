@@ -1,6 +1,7 @@
 FROM amd64/python:3
 
-WORKDIR .
+RUN pipenv install requests
+
 COPY server.py /app
 EXPOSE  8686
 
