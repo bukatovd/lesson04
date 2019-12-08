@@ -1,10 +1,8 @@
-FROM amd64/python:3
+FROM bukatovd/python:1
 
-RUN pipenv install requests
-
-COPY server.py /app
+COPY ./server.py /app/
 EXPOSE  8686
 
-ENTRYPOINT [ "python" ]
+ENTRYPOINT [ "python3" ]
 CMD [ "./app/server.py" ]
 
