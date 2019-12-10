@@ -1,8 +1,10 @@
-FROM bukatovd/python:1
+FROM python:slim-buster
 
-COPY ./server.py /app/
+RUN pip install requests && \
+    pip list
+
+COPY ./*.py /app/
 EXPOSE  8686
 
 ENTRYPOINT [ "python3" ]
 CMD [ "./app/server.py" ]
-

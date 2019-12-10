@@ -1,0 +1,8 @@
+FROM bukatovd/python:1
+
+COPY ./*.py /app/
+EXPOSE  8686
+
+ENTRYPOINT [ "python3" ]
+CMD [ "./app/server.py" ]
+

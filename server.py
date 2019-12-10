@@ -4,7 +4,7 @@
 import socket
 import requests
 
-SERVER_ADDRESS = ('localhost', 8686)
+SERVER_ADDRESS = ('0.0.0.0', 8686)
 
 def send_telegram(text: str):
     token = "1030368472:AAGctnsO69piEV1QXQcr-FK4L5920SBTJ0Q"
@@ -33,8 +33,9 @@ while True:
     print("new connection from {address}".format(address=address))
 
     data = connection.recv(1024)
-    print(str(data))
     send_telegram(data)
+    print(str(data))
+   
 
     connection.send(bytes('Your message send to Telegram!', encoding='UTF-8'))
 
