@@ -1,4 +1,4 @@
-FROM python:slim-buster
+FROM python:alpine
 
 RUN pip install requests && \
     pip list
